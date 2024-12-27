@@ -1,0 +1,203 @@
+/* Estilo general */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 380px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+  /* Esto asegura que la barra de entrada y los botones estén en el fondo */
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background-color: #0062cc;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  max-width: 80%;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user-message {
+  align-self: flex-start;
+  background-color: #e0f7fa;
+}
+
+.bot-message {
+  align-self: flex-end;
+  background-color: #e8f4e8;
+}
+
+.message-text {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.attachment {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.thinking-indicator {
+  display: flex;
+  gap: 5px;
+}
+
+.thinking-indicator .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #3498db;
+  border-radius: 50%;
+  animation: blink 1.2s infinite ease-in-out;
+}
+
+.thinking-indicator .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.thinking-indicator .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Modificar aquí para mover el input y el botón a la parte inferior */
+.message-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  position: sticky;
+  bottom: 0;
+  background-color: #ffffff;  /* Fondo blanco */
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Sombra para separar del contenido */
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-right: 10px;
+  background-color: #f7f7f7;
+}
+
+.send-button {
+  background-color: #0062cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #0052a3;
+}
+
+/* Asegurarse de que los elementos de carga de archivos estén ocultos */
+.file-upload-wrapper {
+  display: none;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.file-upload-wrapper img,
+.file-upload-wrapper audio,
+.file-upload-wrapper video {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.file-cancel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: red;
+}
+
+.file-uploaded {
+  display: block;
+}
+
+/* Bot toggler button */
+#chatbot-toggler {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0062cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#chatbot-toggler:hover {
+  background-color: #0052a3;
+}
+
+#close-chatbot {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+#close-chatbot:hover {
+  color: #333;
+}
+

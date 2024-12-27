@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bienvenido a Miguel IA, el chatbot basado en inteligencia artificial.">
+    <meta name="author" content="Miguel IA">
+    <title>Bienvenido a Miguel IA</title>
+    <style>
+        /* Reset global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fondo animado */
+        body {
+            background-color: #1b1b1b;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            text-align: center;
+            padding: 0 10px;
+            margin: 0;
+        }
+
+        /* Fondo animado */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #00bfff, #ff00f7);
+            z-index: -1;
+            animation: gradientShift 15s ease-in-out infinite;
+            background-size: 300% 300%;
+            filter: blur(15px);
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        /* Contenedor central */
+        .container {
+            z-index: 10;
+            animation: fadeIn 1s ease-out;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Título */
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            animation: fadeInText 2s ease-out forwards;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Descripción */
+        p {
+            font-size: 1.2rem;
+            color: #d3d3d3;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInText 2s ease-out 1s forwards;
+            line-height: 1.8;
+        }
+
+        /* Botón */
+        .btn {
+            background-color: #ff00f7;
+            padding: 18px 60px;
+            font-size: 1.2rem;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInButton 2s ease-out 2s forwards;
+            transform: translateY(30px);
+        }
+
+        /* Hover efecto para el botón */
+        .btn:hover {
+            background-color: #00bfff;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+        }
+
+        @keyframes fadeInButton {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsividad para móviles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 15px 45px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Responsividad para pantallas pequeñas */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+            .btn {
+                padding: 12px 35px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fondo animado -->
+    <div class="background"></div>
+
+    <!-- Contenedor de bienvenida -->
+    <div class="container">
+        <h1>¡Bienvenido a Miguel IA!</h1>
+        <p>Estoy aquí para ayudarte con todo lo que necesites. Haz clic abajo para comenzar a conversar conmigo.</p>
+        <a href="index.html">
+            <button class="btn">Comenzar</button>
+        </a>
+    </div>
+
+</body>
+</html>
